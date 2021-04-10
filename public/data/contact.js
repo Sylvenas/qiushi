@@ -1,11 +1,9 @@
 export const about = [
   { key: '地址', value: '安徽省合肥市包河区花园大道17号' },
   { key: '联系人', value: '赵经理' },
-  { key: '电话', value: '15005516438' },
-  { key: '微信', value: '15005516438' },
+  { key: '电话', value: '15005516438（微信同号）' },
   { key: '联系人', value: '吴经理' },
-  { key: '电话', value: '13675659542' },
-  { key: '微信', value: '13675659542' },
+  { key: '电话', value: '13675659542（微信同号）' },
 ];
 
 export const wechat =
