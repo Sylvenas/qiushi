@@ -20,3 +20,7 @@ export const slideList = [
     desc: '',
   },
 ];
+
+export default function A() {
+  return <div>1</div>;
+}

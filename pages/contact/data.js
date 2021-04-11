@@ -8,3 +8,7 @@ export const about = [
 
 export const wechat =
   'https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/8321782233/2dba/1c66/520a/86d791e12a51822b078adc9d5c9cfddf.jpeg';
+
+export default function A() {
+  return <div>1</div>;
+}

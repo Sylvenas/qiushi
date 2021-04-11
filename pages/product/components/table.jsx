@@ -1,9 +1,7 @@
 import React from 'react';
-import { useTable } from 'react-table';
-import { MID } from './data';
 import './table.less';
 
-export default function TableMid() {
+export function TableMid() {
   return (
     <table cellSpacing="0" cellPadding="0">
       <tbody>
@@ -511,4 +509,8 @@ export function TableRes() {
       </tbody>
     </table>
   );
+}
+
+export default function A() {
+  return <div>1</div>;
 }

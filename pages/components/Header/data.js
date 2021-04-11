@@ -19,3 +19,7 @@ export const navList = [
     subNav: '/contact',
   },
 ];
+
+export default function A() {
+  return <div>1</div>;
+}

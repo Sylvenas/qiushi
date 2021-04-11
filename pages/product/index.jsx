@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import Table, { TableRes } from './components/table';
+import { TableMid, TableRes } from './components/table';
 import './index.less';
 
 function Product() {
@@ -38,7 +38,7 @@ function Product() {
               中间体
             </p>
           </div>
-          {tab === 0 ? <Table /> : <TableRes />}
+          {tab === 0 ? <TableMid /> : <TableRes />}
         </div>
       </Layout>
     </div>
