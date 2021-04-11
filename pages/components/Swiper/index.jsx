@@ -1,5 +1,6 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
+import SwiperCore, { Autoplay } from 'swiper';
 import 'swiper/swiper.less';
 import './index.less';
 import { slideList } from './data';
@@ -17,6 +18,7 @@ function renderSwiperSlide(slideList) {
 }
 
 function MainSwiper() {
+  SwiperCore.use([Autoplay]);
   const params = {
     spaceBetween: 30,
 

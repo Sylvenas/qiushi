@@ -4,11 +4,15 @@ import './index.less';
 
 export default function Home() {
   return (
-    <div className="container">
-      <Layout>
+    <Layout>
+      <div className="p-home">
         <Swiper />
         <p className={'company-desc'}>
-          淮南法，秋石最堪夸。 位应乾坤白露节，象移寅卯紫河车。 子午结朝霞。
+          淮南法，秋石最堪夸。
+          <br />
+          位应乾坤白露节，象移寅卯紫河车。
+          <br />
+          子午结朝霞。
           <br />
           <br />
           <b>安徽秋石医药科技有限公司</b>
@@ -23,7 +27,7 @@ export default function Home() {
           <br />
           秋石医药以研发为发展基石，以中国科学技术大学、安徽大学、中国药科大学等国内知名院校为依托，以及与国际接轨的生产工厂，将倾力打造集研发、生产、技术服务、销售为一体的更具竞争力的高科技医药企业，我们期待和业内伙伴开展更多合作，实现共赢，造福全球患者。
         </p>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
