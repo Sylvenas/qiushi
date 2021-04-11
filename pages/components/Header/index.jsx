@@ -1,17 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import styles from './index.module.css';
-import { companyLogo, navList } from '../../../public/data/header';
+import styles from './index.less';
+import { companyLogo, navList } from './data';
 
 const renderNav = (list, pathname) => {
   return list.map((item) => (
     <Link href={item.subNav} key={item.subNav}>
       <li
         className={
-          styles.navitem +
-          ' ' +
-          (pathname == item.subNav ? styles.navitemactive : '')
+          'navitem' + ' ' + (pathname == item.subNav ? 'navitemactive' : '')
         }
       >
         {item.name}
@@ -23,13 +21,13 @@ const renderNav = (list, pathname) => {
 function Header() {
   const { pathname } = useRouter();
   return (
-    <header className={styles.pageheader}>
-      <div className={styles.header}>
-        <img className={styles.companylogo} src={companyLogo} />
-        <h1 className={styles.companyname}>秋石医药</h1>
+    <header className={'pageheader'}>
+      <div className={'header'}>
+        <img className={'companylogo'} src={companyLogo} />
+        <h1 className={'companyname'}>秋石医药</h1>
       </div>
-      <nav className={styles.navigation}>
-        <ul className={styles.navlist}>{renderNav(navList, pathname)}</ul>
+      <nav className={'navigation'}>
+        <ul className={'navlist'}>{renderNav(navList, pathname)}</ul>
       </nav>
     </header>
   );

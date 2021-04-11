@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/Layout';
-import styles from './index.module.css';
+import Table, { TableRes } from './components/table';
+import './index.less';
 
 function Product() {
   const [isClient, setIsClient] = useState(false);
+  const [tab, setTab] = useState(0);
 
   useEffect(() => {
     setIsClient(true);
@@ -20,16 +22,23 @@ function Product() {
       </Head>
 
       <Layout>
-        <div className={styles.img} />
-        <div className={styles.product}>
-          <img
-            className={styles.productimg}
-            src="https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/5682346071/27d6/dd2b/1426/6237984d446a5cb88478d5b1c52177c5.jpg"
-          />
-          <img
-            className={styles.productimg}
-            src="https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/5682341035/5384/41dd/5710/8b44a8c92c18d27e7f4da422c019e00f.png"
-          />
+        <div className="p-product">
+          <div className={'img'} />
+          <div className={'product'}>
+            <p
+              className={tab === 0 ? 'tabmenuactive' : 'tabmenu'}
+              onClick={() => setTab(0)}
+            >
+              原料药
+            </p>
+            <p
+              className={tab === 1 ? 'tabmenuactive' : 'tabmenu'}
+              onClick={() => setTab(1)}
+            >
+              中间体
+            </p>
+          </div>
+          {tab === 0 ? <Table /> : <TableRes />}
         </div>
       </Layout>
     </div>

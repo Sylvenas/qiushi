@@ -10,10 +10,10 @@ export const navList = [
     name: '产品信息',
     subNav: '/product',
   },
-  // {
-  //   name: '创新',
-  //   subNav: '/newworld',
-  // },
+  {
+    name: '招聘信息',
+    subNav: '/jobs',
+  },
   {
     name: '联系我们',
     subNav: '/contact',

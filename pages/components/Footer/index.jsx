@@ -1,23 +1,23 @@
 import React from 'react';
-import styles from './index.module.css';
-import { footerNav } from '../../../public/data/footer';
+import styles from './index.less';
+import { footerNav } from './data';
 
 export default function Footer() {
   return (
-    <div className={styles.pagefooter}>
-      <div className={styles.nav}>
+    <div className={'pagefooter'}>
+      <div className={'nav'}>
         {footerNav.map((item) => (
-          <section className={styles.navcol} key={item.name}>
-            <h1 className={styles.title}>{item.name}</h1>
+          <section className={'navcol'} key={item.name}>
+            <h1 className={'title'}>{item.name}</h1>
             {item.subNav.map((nav) => (
-              <p className={styles.subnav} key={nav.key}>
+              <p className={'subnav'} key={nav.key}>
                 {nav.key}
               </p>
             ))}
           </section>
         ))}
       </div>
-      <p className={styles.copyright}>
+      <p className={'copyright'}>
         Copyright ©2021 安徽秋石医药科技有限公司. All rights reserved.
       </p>
     </div>
