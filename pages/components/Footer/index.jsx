@@ -5,7 +5,7 @@ import { footerNav } from './data';
 export default function Footer() {
   return (
     <div className={'pagefooter'}>
-      <div className={'nav'}>
+      {/* <div className={'nav'}>
         {footerNav.map((item) => (
           <section className={'navcol'} key={item.name}>
             <h1 className={'title'}>{item.name}</h1>
@@ -16,7 +16,7 @@ export default function Footer() {
             ))}
           </section>
         ))}
-      </div>
+      </div> */}
       <p className={'copyright'}>
         Copyright ©2021 安徽秋石医药科技有限公司. All rights reserved.
       </p>

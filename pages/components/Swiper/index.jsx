@@ -1,13 +1,17 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/swiper.less';
-import styles from './index.less';
+import './index.less';
 import { slideList } from './data';
 
 function renderSwiperSlide(slideList) {
   return slideList.map((item) => (
-    <div key={item.img}>
-      <img src={item.img} className={styles.slideimg} />
+    <div
+      key={item.img}
+      className="slideimg"
+      style={{ backgroundImage: `url(${item.img})` }}
+    >
+      {/* <img src={item.img} className={'slideimg'} /> */}
     </div>
   ));
 }
@@ -15,6 +19,7 @@ function renderSwiperSlide(slideList) {
 function MainSwiper() {
   const params = {
     spaceBetween: 30,
+
     centeredSlides: true,
     loop: true,
     autoplay: {
@@ -30,7 +35,7 @@ function MainSwiper() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
-    containerClass: styles.containerClass,
+    containerClass: 'containerClass',
   };
   return <Swiper {...params}>{renderSwiperSlide(slideList)}</Swiper>;
 }
