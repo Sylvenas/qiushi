@@ -6,7 +6,8 @@
     "dev": "next dev -p 80",
     "build": "next build",
     "start": "next start -p 80",
-    "pm2-start": "pm2 start -i max  npm --name 'qiushi' -- start"
+    "pm2-start": "pm2 start -i max  npm --name 'qiushi' -- httpsStart",
+    "httpsStart": "forever start app.js "
   },
   "dependencies": {
     "@zeit/next-less": "^1.0.1",
