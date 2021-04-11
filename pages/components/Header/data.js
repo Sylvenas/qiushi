@@ -15,6 +15,10 @@ export const navList = [
     subNav: '/jobs',
   },
   {
+    name: '新闻',
+    subNav: '/news',
+  },
+  {
     name: '联系我们',
     subNav: '/contact',
   },

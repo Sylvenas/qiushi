@@ -19,6 +19,16 @@ export const slideList = [
       'https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/8375781464/eb3d/2d70/e985/79598e37c09f80cb64cf44c02a417d8e.jpeg',
     desc: '',
   },
+  {
+    img:
+      'https://p6.music.126.net/obj/wo3DlcOGw6DClTvDisK1/8383654901/87a1/4ed8/fea7/bbcbc1eccbbe1056d94044855b6c9277.jpeg',
+    desc: '',
+  },
+  {
+    img:
+      'https://p5.music.126.net/obj/wo3DlcOGw6DClTvDisK1/8383658119/e221/53aa/34bd/10b850c3424672215b66edfb86779d82.jpeg',
+    desc: '',
+  },
 ];
 
 export default function A() {

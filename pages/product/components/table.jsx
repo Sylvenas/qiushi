@@ -17,10 +17,14 @@ export function TableMid() {
             </p>
           </td>
           <td valign="middle">
-            <b align="center">CAS</b>
+            <p align="center">
+              <b>CAS</b>
+            </p>
           </td>
           <td valign="top">
-            <b align="center">Documentation</b>
+            <p align="center">
+              <b>Documentation</b>
+            </p>
           </td>
         </tr>
         <tr>
@@ -217,16 +221,24 @@ export function TableRes() {
       <tbody>
         <tr>
           <td valign="middle">
-            <b align="center">序号</b>
+            <p align="center">
+              <b>序号</b>
+            </p>
           </td>
           <td valign="middle">
-            <b align="center">Corresponding API</b>
+            <p align="center">
+              <b>Corresponding API</b>
+            </p>
           </td>
           <td valign="middle">
-            <b align="center">Intermediate</b>
+            <p align="center">
+              <b>Intermediate</b>
+            </p>
           </td>
           <td valign="middle">
-            <b align="center">CAS</b>
+            <p align="center">
+              <b>CAS</b>
+            </p>
           </td>
         </tr>
         <tr>
@@ -426,7 +438,9 @@ export function TableRes() {
             <p>7</p>
           </td>
           <td rowSpan="2" valign="middle">
-            <p>培哚普利 Perindopril</p>
+            <p>
+              培哚普利 <br /> Perindopril
+            </p>
           </td>
           <td valign="middle">
             <p>(2S,3aS,7aS)- 八氢 -1H- 吲哚 -2- 羧酸</p>
