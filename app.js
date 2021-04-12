@@ -47,16 +47,15 @@ app.prepare().then(() => {
       if (err) throw err;
       console.log('> Ready on http://localhost:3000');
     });
-
-  const httpServer = http
-    .createServer((request, response) => {
-      response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
-      response.end();
-    })
-    .listen(80);
-
   // httpServer.on('request', (request, response) => {
   //   response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
   //   response.end();
   // });
 });
+
+const httpServer = http
+  .createServer((request, response) => {
+    response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
+    response.end();
+  })
+  .listen(80);
