@@ -1,5 +1,5 @@
 // server.js
-const { createServer } = require('http');
+const http = require('http');
 const https = require('https');
 const { parse } = require('url');
 const fs = require('fs');
@@ -47,4 +47,11 @@ app.prepare().then(() => {
       if (err) throw err;
       console.log('> Ready on http://localhost:3000');
     });
+
+  const httpServer = http.createServer().listen(80);
+
+  httpServer.on('request', (request, response) => {
+    response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
+    response.end();
+  });
 });
