@@ -11,39 +11,27 @@ const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  https
-    .createServer(
-      {
-        key: fs.readFileSync(
-          path.join(__dirname, './cert/5473165_www.qiushipharm.com.key'),
-          'utf8'
-        ),
-        cert: fs.readFileSync(
-          path.join(__dirname, './cert/5473165_www.qiushipharm.com.pem'),
-          'utf8'
-        ),
-      },
-      (req, res) => {
-        // Be sure to pass `true` as the second argument to `url.parse`.
-        // This tells it to parse the query portion of the URL.
-        const parsedUrl = parse(req.url, true);
-        const { pathname, query } = parsedUrl;
-        if (pathname === '/.well-known/pki-validation/fileauth.txt') {
-          fs.readFile(__dirname + '/fileauth.txt', (err, contents) => {
-            res.setHeader('Content-Type', 'text/plain');
-            res.writeHead(200);
-            res.end(contents);
-          });
-        } else if (pathname === '/a') {
-          app.render(req, res, '/a', query);
-        } else if (pathname === '/b') {
-          app.render(req, res, '/b', query);
-        } else {
-          handle(req, res, parsedUrl);
-        }
+  http
+    .createServer({}, (req, res) => {
+      // Be sure to pass `true` as the second argument to `url.parse`.
+      // This tells it to parse the query portion of the URL.
+      const parsedUrl = parse(req.url, true);
+      const { pathname, query } = parsedUrl;
+      if (pathname === '/.well-known/pki-validation/fileauth.txt') {
+        fs.readFile(__dirname + '/fileauth.txt', (err, contents) => {
+          res.setHeader('Content-Type', 'text/plain');
+          res.writeHead(200);
+          res.end(contents);
+        });
+      } else if (pathname === '/a') {
+        app.render(req, res, '/a', query);
+      } else if (pathname === '/b') {
+        app.render(req, res, '/b', query);
+      } else {
+        handle(req, res, parsedUrl);
       }
-    )
-    .listen(443, (err) => {
+    })
+    .listen(1000, (err) => {
       if (err) throw err;
       console.log('> Ready on http://localhost:3000');
     });
@@ -53,9 +41,9 @@ app.prepare().then(() => {
   // });
 });
 
-const httpServer = http
-  .createServer((request, response) => {
-    response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
-    response.end();
-  })
-  .listen(80);
+// const httpServer = http
+//   .createServer((request, response) => {
+//     response.writeHead(301, { Location: 'https://www.qiushipharm.com/' });
+//     response.end();
+//   })
+//   .listen(80);
